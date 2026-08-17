@@ -112,7 +112,8 @@ Secrets must not be committed to the repository.
 
 Use environment variables for API credentials:
 
-spring.ai.openai.api-key=${OPENAI_API_KEY}
+The project uses Ollama for local LLM inference.
+No OpenAI API key is required.
 
 The project can also use a locally hosted LLM through Ollama.
 
