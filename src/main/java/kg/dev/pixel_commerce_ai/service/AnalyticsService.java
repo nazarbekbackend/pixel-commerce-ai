@@ -19,4 +19,5 @@ public interface AnalyticsService {
             BigDecimal exchangeRate,
             BigDecimal budget
     );
+    List<ProductAnalyticsResponse> getProductsInStock();
 }

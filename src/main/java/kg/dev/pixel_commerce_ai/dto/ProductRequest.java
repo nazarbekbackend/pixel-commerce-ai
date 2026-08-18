@@ -32,9 +32,6 @@ public class ProductRequest {
     @Positive(message = "Purchase price must be positive")
     private BigDecimal purchasePrice;
 
-    @NotBlank(message = "Purchase currency is required")
-    private String purchaseCurrency;
-
     @NotNull(message = "Sale price is required")
     @Positive(message = "Sale price must be positive")
     private BigDecimal salePrice;

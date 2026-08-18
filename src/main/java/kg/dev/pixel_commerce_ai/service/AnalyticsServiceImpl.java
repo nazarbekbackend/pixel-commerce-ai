@@ -1043,6 +1043,19 @@ public class AnalyticsServiceImpl implements AnalyticsService {
         return response;
     }
 
+    @Override
+    @Transactional(readOnly = true)
+    public List<ProductAnalyticsResponse> getProductsInStock() {
+
+        return getProductsAnalytics()
+                .stream()
+                .filter(product ->
+                        product.getStock() != null
+                                && product.getStock() > 0
+                )
+                .toList();
+    }
+
 
     // =========================================================
     // CALCULATE RECOMMENDED QUANTITY

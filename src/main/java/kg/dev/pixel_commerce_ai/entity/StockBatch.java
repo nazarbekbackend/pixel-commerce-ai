@@ -26,7 +26,4 @@ public class StockBatch {
 
     private LocalDateTime purchaseDate;
 
-    @ManyToOne
-    @JoinColumn(name = "purchase_id")
-    private Purchase purchase;
 }

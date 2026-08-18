@@ -23,7 +23,6 @@ public class Product {
     @Enumerated(EnumType.STRING)
     private ProductCondition condition;
     private BigDecimal purchasePrice;
-    private String purchaseCurrency;
     private BigDecimal salePrice;
 
     @Enumerated(EnumType.STRING)

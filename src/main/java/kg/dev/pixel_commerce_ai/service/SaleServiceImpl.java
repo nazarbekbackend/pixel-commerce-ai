@@ -94,10 +94,7 @@ public class SaleServiceImpl implements SaleService {
                         );
 
                 BigDecimal batchCostKgs =
-                        batch.getUnitCost()
-                                .multiply(
-                                        request.getExchangeRate()
-                                );
+                        batch.getUnitCost();
 
                 BigDecimal batchTotalCost =
                         batchCostKgs.multiply(

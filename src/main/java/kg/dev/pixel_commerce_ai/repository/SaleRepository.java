@@ -2,6 +2,7 @@ package kg.dev.pixel_commerce_ai.repository;
 
 import kg.dev.pixel_commerce_ai.entity.Sale;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import java.math.BigDecimal;
@@ -31,4 +32,8 @@ public interface SaleRepository extends JpaRepository<Sale, Long> {
             from SaleItem si
             """)
     Integer getSoldItems();
+
+    @Modifying
+    @Query("delete from Sale")
+    void deleteAllSales();
 }

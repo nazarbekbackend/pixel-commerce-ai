@@ -18,7 +18,6 @@ public class ProductMapper {
         product.setStorage(request.getStorage());
         product.setStatus(request.getStatus());
         product.setPurchasePrice(request.getPurchasePrice());
-        product.setPurchaseCurrency(request.getPurchaseCurrency());
         product.setSalePrice(request.getSalePrice());
 
         return product;
@@ -37,7 +36,6 @@ public class ProductMapper {
         response.setModel(product.getModel());
         response.setStatus(product.getStatus());
         response.setStorage(product.getStorage());
-        response.setPurchaseCurrency(product.getPurchaseCurrency());
         response.setSalePrice(product.getSalePrice());
 
         return response;
